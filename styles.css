@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
 
 :root {
-    --red:#EA5454;
-    --cyan:#44D3D2;
-    --orange:#FCAE4A;
-    --blue:#549EF2;
-    --background:#FAFAFA;
-    --background-white:#FFFFFF;
-    --text:#4D4F62;
+    --red: #EA5454;
+    --cyan: #44D3D2;
+    --orange: #FCAE4A;
+    --blue: #549EF2;
+    --background: #FAFAFA;
+    --background-white: #FFFFFF;
+    --text: #4D4F62;
 }
 
 *,
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    height:100%;
+    height: 100%;
     margin: 0 auto;
     padding: 0;
     font-size: 0.938rem;
@@ -39,32 +39,29 @@ body {
 }
 
 img {
+    display: block;
     height: auto;
     max-width: 100%;
     margin: 2.5rem 0 0 auto;
 }
 
-img,
-b {
-    display: block;
-}
-
 h1,
 h2,
 p,
-b {
+span {
+    display: block;
     color: var(--text);
     margin: 0;
 }
 
-h1,
-b {
-    letter-spacing: 0.016rem;
-}
-
 h1 {
     font-size: 2.25rem;
+    letter-spacing: 0.016rem;
     font-weight: 200;
+}
+
+h1 span {
+    font-weight: bold
 }
 
 h2 {
@@ -72,8 +69,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-h2,
-b {
+h2 {
     font-weight: 600;
 }
 
@@ -85,16 +81,12 @@ p {
     line-height: 1.438rem;
 }
 
-/* CONTAINER */
-
 main {
     max-width: 77.375rem;
     width: 100%;
     padding: 0 2rem;
     margin: 5rem auto;
 }
-
-/* HEADER */
 
 header {
     max-width: 34.375rem;
@@ -110,16 +102,13 @@ header p {
     margin: 1rem 0 3.125rem 0;
 }
 
-/* SECTION */
-
 section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card:nth-child(1),
-.card:nth-child(3) {
+.card:nth-child(odd) {
     transform: translateY(50%);
 }
 
@@ -160,15 +149,14 @@ section {
     background-color: var(--orange);
 }
 
-@media screen and (max-width:76.25rem) {
+@media screen and (max-width: 76.25rem) {
 
-    .card:nth-child(1),
-    .card:nth-child(3) {
+    .card:nth-child(odd) {
         transform: none;
     }
 }
 
-@media screen and (max-width:36rem) {
+@media screen and (max-width: 36rem) {
     h1 {
         font-size: 1.5rem;
     }
